@@ -41,7 +41,7 @@ The notebook requires R and the following packages:
 
 ## How to run
 
-1. Open `notebooks/MD004VicentRipollBaradatAC03.ipynb` in Jupyter Notebook with an R kernel.
+1. Open `notebooks/notebook.ipynb` in Jupyter Notebook with an R kernel.
 2. Make sure the CSV file in `data/` is available in the notebook's working directory.
 3. Run the cells in order.
 
