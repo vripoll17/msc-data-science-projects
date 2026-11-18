@@ -1,48 +1,64 @@
-# Boston Housing Data Analysis
+# MSc Data Science Projects
 
-This project analyzes a dataset containing housing prices and socioeconomic information from Boston.
+This repository is a collection of practical projects developed as part of my
+Master's degree in Data Science.
 
-## Project contents
+The projects cover complementary stages of the data science workflow, including
+exploratory data analysis, data visualization, statistical techniques,
+predictive modelling, model evaluation, and the communication of results. The
+analyses are primarily implemented in R and documented through Jupyter
+notebooks and reports.
 
-- `notebooks/`: R notebook with the complete exploratory and statistical analysis.
-- `data/`: Boston housing dataset in CSV format.
-- `reports/`: Exported PDF report with the detailed explanation of the analysis.
+## Projects
 
-## Analysis performed
+| Project | Description | Main techniques |
+|---|---|---|
+| [Boston Housing](./boston-housing/) | Analysis of housing prices and socioeconomic variables in Boston. The project studies which factors are associated with median house values and develops a linear regression model for prediction. | EDA, correlation, PCA, ANOVA, linear regression |
+| [Customer Churn Analysis](./churn-analysis/) | Analysis of customer behavior in a telecommunications company to identify patterns associated with churn and build an interpretable logistic regression model. | EDA, PCA, Mutual Information, logistic regression |
 
-- Dataset exploration and visualization.
-- Quantitative and qualitative variable analysis.
-- Correlation analysis and principal component analysis (PCA).
-- ANOVA tests.
-- Linear regression model selection and evaluation.
-- Prediction analysis using training and test datasets.
+## Boston Housing
 
-## Main results
+The [Boston Housing project](./boston-housing/) explores a dataset containing
+housing prices and socioeconomic information from Boston.
 
-- `rooms_per_dwelling` has a positive relationship with the median house value.
-- `lower_status` has a negative relationship with the median house value.
-- `c_river_variable` and `highway_index` have statistically significant effects on house prices.
-- The first two principal components explain 60.41% of the variance.
-- The final regression model achieves an R-squared of approximately 71.91% on the cleaned training data and 63.00% on the test data.
-- The model obtains an RMSE of approximately 5.456 and an MAE of 3.78.
+The analysis includes:
 
-The complete interpretation of these results, including the visualizations, statistical tests, regression diagnostics, and conclusions, is available in the PDF report in the `reports/` folder.
+- Exploratory data analysis and visualizations
+- Correlation and principal component analysis
+- ANOVA tests
+- Comparison and selection of linear regression models
+- Evaluation using R-squared, RMSE, and MAE
 
-## Requirements
+The project concludes that variables related to room availability and
+socioeconomic status are strongly associated with housing prices. It also
+provides a detailed PDF report and an R notebook with the complete workflow.
 
-The notebook requires R and the following packages:
+## Customer Churn Analysis
 
-- `ggplot2`
-- `gridExtra`
-- `GGally`
-- `nortest`
-- `caret`
-- `lmtest`
+The [Customer Churn project](./churn-analysis/) studies customer activity and
+behavior in an Indian telecommunications company.
 
-## How to run
+The analysis includes:
 
-1. Open `notebooks/notebook.ipynb` in Jupyter Notebook with an R kernel.
-2. Make sure the CSV file in `data/` is available in the notebook's working directory.
-3. Run the cells in order.
+- Exploratory data analysis and missing-value assessment
+- PCA and Mutual Information analysis
+- Development of multiple logistic regression models
+- Model evaluation using Recall, ROC-AUC, confusion matrices, and AIC
+- Business-oriented recommendations for customer retention
 
-The analysis focuses on identifying the variables that best explain the median value of Boston homes and building a simple linear regression model for prediction.
+The selected model identifies important churn signals related to early payment
+activity, reward purchases, and permissions. It is designed as an interpretable
+decision-support tool, with further validation and model improvement needed
+before production use.
+
+## Repository structure
+
+```text
+msc-data-science-projects/
+├── boston-housing/
+├── churn-analysis/
+└── README.md
+```
+
+Each project contains its own README, data, notebooks, and, where applicable,
+exported reports.
